@@ -1,0 +1,17 @@
+Summary
+
+Create a repo named USERNAME.github.io.
+In that repo, click Settings then click Automatic Page Generator, then complete the wizard to publish a User Page.
+Go back to your content repo and click Settings then click Automatic Page Generator, then complete the wizard to publish a Project Page. (Logically, the project page's files would go in a special directory but GitHub puts them in a gh-pages branch. Don't merge that branch to/from master.)
+Sync the gh-pages branch to your computer then copy in your PDFs:
+
+git checkout gh-pages
+git checkout master -- 'docs/*.pdf'
+
+Commit the changes and push them to GitHub.
+Now go back to the repo on GitHub and use the Automatic Page Generator to edit the Project Page, adding links to these PDFs of the form:
+
+[Intro.pdf](http://USERNAME.github.io/REPONAME/docs/Intro.pdf).
+
+Republish the Project Page.
+
